@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.thymeleaf.org ">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>CEAP - Admin </title>
+    <link rel="stylesheet" href="/login.css">
+    <script type= "text/javascript" src="/login.js"></script>
+  </head>
+  <body>
+      <div class="formulario">
+        <div class="col-3  mx-auto">
+                  <!-- LOGO  -->
+                  <div class="container-img">
+                    <div class="row">
+                      <div class=".img-thumbnail rounded mx-auto d-block">
+                        <a href="#" class="logo">
+                          <img src="/Logo-CEAP-Colorido.png" alt="logo" style="height: 100px; width: 200px;" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Formulário de login -->
+                  <form action="/" method="POST">
+                    <div class="form-group input-rounded">
+                      <input id="email" type="email" class="form-control" placeholder="Email" name="Email_user"/>
+                    </div>
+                    <div class="form-group input-rounded">
+                      <input id="senha"type="password" class="form-control" placeholder="Password" name="Senha_user"/>
+                    </div>
+                    <div class="form-inline">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" class="form-check-input" />Remember me <i class="input-frame"></i>
+                        </label><br>                    
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-color btn-block" name="btnLogin" onclick="logar()"> Login </button>
+                  </form>
+           
+          </div>
+      </div>
+      <footer>
+        <div class="div-footer">
+          <p>Copyright © 2021 Centro Educacional Assistencial Profissionalizante</p>
+        </div>
+      </footer>
+  </body>
+</html>

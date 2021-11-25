@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/tabela.css">
+    <title>Login de Usuários</title>
+</head>
+<body>
+   <div>
+   	<table>
+   		<tr>
+   			<th>Prédio</th>
+   			<th>Sala</th>
+   			<th>Itens</th>
+   			<th>Quantidade</th>
+   			<th>Status</th>
+   		</tr>
+   		<tr th:each="predio : ${predios}">
+   			<td th:text="${predio.predio}"></td>
+   			<td th:text="${predio.sala}"></td>
+   			<td th:text="${predio.nome}"></td>
+   			<td th:text="${predio.quantidade}"></td>
+   			<td th:text="${predio.status.get(1)} + '-' + ${predio.status.get(2) + 1} + '-' + ${predio.status.get(5)}"></td>
+   		</tr>
+   	</table>
+   	<a>Delete</a>
+   	<a>Update</a>
+   	<a>Create</a>
+   </div>
+</body>
+</html>
