@@ -15,6 +15,8 @@ public class PredioS {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name ="id")
 	private long id;
+	@Column(name ="img")
+	private String img;
 	@Column(name ="Nome", nullable=false, length=50)
 	private String nome;
 	@Column(name ="Predio" , nullable=false, length=50)
@@ -29,6 +31,12 @@ public class PredioS {
 	}
 	public void setId(long id) {
 		this.id = id;
+	}
+	public String getImg() {
+		return img;
+	}
+	public void setImg(String img) {
+		this.img = img;
 	}
 	public String getNome() {
 		return nome;
