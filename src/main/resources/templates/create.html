@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/modal.css">
+    <title>Create</title>
+</head>
+<body>
+    <!--  MODAL  -->
+    <div id="modal" class="hide">
+        <div class="modal_create">
+            <h1>Insert Itens</h1>
+            <hr>
+            <br>
+            <form action="/" method="POST">
+                
+                <div>
+                    <input type="url" name="img" placeholder="Link da Imagem">
+                    <input type="text" name="Nome" placeholder="Nome">               
+                    <input type="text" name="Predio" placeholder="Prédio">
+                    <input type="text" name="Sala" placeholder="Sala">
+                    <input type="text" name="Quantidade" placeholder="Quantidade">
+                </div>
+
+                <a href="#" onclick="onOff()">Voltar</a>
+                <button type="submit" class="button">Salvar</button>
+
+            </form>
+        </div>
+    </div>
+    <script src="/modal.js"></script>
+</body>
+</html>
