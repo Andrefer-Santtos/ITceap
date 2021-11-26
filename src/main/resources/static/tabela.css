@@ -1,33 +1,220 @@
-html{
-	height: 100%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
-body{
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
+*{
+    margin: 0;
+    padding: 0;
 }
 
 a{
-	padding: 10px;
-	background-color: gray;
+	text-decoration:none;
+	color:black;
+	background-color:lightgray;
+	padding: 10px 30px;
 	cursor: pointer;
-	border-radius: 30px;
+	font-weight:bold;
+	border-radius: 10px;
+	border-top: 1px solid #CCCCCC;
+  	border-right: 1px solid #333333;
+  	border-bottom: 1px solid #333333;
+  	border-left: 1px solid #CCCCCC;
+  	font-family: sans-serif;
+    font-size: 1.1rem;
+    margin-top: 5%;
+    font-family: 'Share Tech Mono', monospace;
+}
+	
+a:active{
+	
+	border-top: 1px solid #333333;
+  	border-right: 1px solid #CCCCCC;
+  	border-bottom: 1px solid #CCCCCC;
+  	border-left: 1px solid #333333;
+	
+}
+	
+	
+html {
+    font-family: sans-serif;
+    height: 100%;
+}
+	
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(34,91,195);
+    background: linear-gradient(0deg, rgba(34,91,195,1) 0%, rgba(0,0,0,0.915948275862069) 100%);
 }
 
-table{
-	margin-bottom: 20px;
-}
-
-td{
-	border: 3px solid black;
+	
+div{
 	text-align:center;
 }
-
-th{
-	border: solid black 3px;
-	padding: 5px;
+	
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    margin-bottom: 50px;
 }
 
+td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+}
+
+th {
+    background-color: rgb(235,235,235);
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) td {
+    background-color: rgb(250,250,250);
+}
+
+tr:nth-child(odd) td {
+    background-color: rgb(245,245,245);
+}
+
+caption {
+	padding: 10px;
+}
+    
+
+form{
+    text-align: center;
+}
+
+select{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10%;
+    font-family: sans-serif;
+    font-size: 14pt;
+    outline: none;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+input{
+    width: 80%;
+    height: 30px;
+    font-family: sans-serif;
+    font-size: 14pt;
+    padding-left: 5%;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    margin-left: 5%;
+    border-radius: 8px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+button{
+    outline: none;
+    border-radius: 20%;
+    font-family: sans-serif;
+    font-size: 14pt;
+    width: 5rem;
+    height: 1.5rem;
+    margin-top: 5%;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+button:hover{
+    background-color: rgb(0, 162, 255);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+h1{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Share Tech Mono', monospace;
+}
+    
+/*MODAL Style*/
+#modal {
+    background: linear-gradient(0deg, rgba(34,91,195,1) 0%, rgba(0,0,0,0.915948275862069) 100%);
+    position: absolute;
+    top: 0;
+
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+
+    transition: 500ms;
+}
+
+#modal.addScroll {
+    overflow: auto;
+}
+
+#modal .content {
+    margin: 32px 0;
+    color: white;
+}
+
+#modal .content h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+a:hover {
+    background: white;
+    color: #5A4FBE;
+
+    text-decoration: none;
+}
+
+form button {
+    background: white;
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 6px;
+    cursor: pointer;
+
+    margin-top: 32px;
+
+    grid-column: 2;
+    justify-self: end;
+}
+
+form button:hover {
+    background-color: #ffffff44;
+    color: white;
+
+    text-decoration: none;
+}
+
+#modal.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal_create{
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+}
+
+.modal_update{
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+}

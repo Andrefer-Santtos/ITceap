@@ -5,30 +5,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/tabela.css">
+    <link rel="stylesheet" href="tabela.css">
     <title>Login de Usuários</title>
 </head>
 <body>
    <div>
    	<table>
    		<tr>
-   			<th>Prédio</th>
-   			<th>Sala</th>
+   			<th>Prédios</th>
+   			<th>Salas</th>
    			<th>Itens</th>
    			<th>Quantidade</th>
-   			<th>Status</th>
    		</tr>
    		<tr th:each="predio : ${predios}">
    			<td th:text="${predio.predio}"></td>
    			<td th:text="${predio.sala}"></td>
    			<td th:text="${predio.nome}"></td>
    			<td th:text="${predio.quantidade}"></td>
-   			<td th:text="${predio.status.get(1)} + '-' + ${predio.status.get(2) + 1} + '-' + ${predio.status.get(5)}"></td>
    		</tr>
    	</table>
-   	<a>Delete</a>
-   	<a>Update</a>
-   	<a>Create</a>
+   	<a onclick="del()">Delete</a>
+   	<a onclick="update()">Update</a>
+   	<a onclick="create()">Create</a>
    </div>
+   <!--  MODAL  -->
+    <div id="modal" class="hide">
+        <div class="modal_update">
+            <h1>Update Itens</h1>
+            <hr>
+            <br>
+            <form action="/" method="POST">
+
+                <select name="update-select" >
+                	<option value="opcao" th:each="predio : ${predios}" th:text="${predio.sala}"></option>
+                </select>
+                
+            <div>
+                <input type="url" name="img" placeholder="Link da Imagem">
+                <input type="text" name="Nome" placeholder="Nome">               
+                <input type="text" name="Predio" placeholder="Prédio">
+                <input type="text" name="Sala" placeholder="Sala">
+                <input type="text" name="Quantidade" placeholder="Quantidade">
+            </div>
+                
+                <a href="#" onclick="update()">Voltar</a>
+                <button type="submit" class="button">Atualizar</button>
+
+            </form>
+        </div>
+    </div>
+    <!--  MODAL  -->
+    <div id="modal" class="hide">
+        <div class="modal_create">
+            <h1>Insert Itens</h1>
+            <hr>
+            <br>
+            <form>
+                
+                <div>
+                    <input type="url" name="img" placeholder="Link da Imagem">
+                    <input type="text" name="Nome" placeholder="Nome">               
+                    <input type="text" name="Predio" placeholder="Prédio">
+                    <input type="text" name="Sala" placeholder="Sala">
+                    <input type="text" name="Quantidade" placeholder="Quantidade">
+                </div>
+
+                <a href="#" onclick="create()">Voltar</a>
+                <button class="button">Salvar</button>
+
+            </form>
+        </div>
+    </div>
+     <!--  MODAL  -->
+    <div id="modal" class="hide">
+        <div class="modal_update">
+            <h1>Delete Itens</h1>
+            <hr>
+            <br>
+            <form action="/" method="POST">
+               <select name="update-select" >
+               		<option value="opcao" th:each="predio : ${predios}" th:text="${predio.sala}"></option>
+                </select>
+                <a href="#" onclick="del()">Voltar</a>
+                <button type="submit" class="button">Deletar</button>
+            </form>
+        </div>
+    </div>
+   <script type="text/javascript" src="tabela.js"></script>
 </body>
 </html>
