@@ -7,10 +7,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <title>CEAP - Admin </title>
     <link rel="stylesheet" href="/login.css">
+    <link rel="stylesheet" href="/splash.css">
     <script type= "text/javascript" src="/login.js"></script>
+    <script type= "text/javascript" src="/splash.js"></script>
+
   </head>
   <body>
-      <div class="formulario">
+          
+        <!-- Splah screen -->
+       <div id="loading" >
+      <img src="https://deborapsol.com.br/themes/debora/images/loader.gif" style="width:250px;height:250px" />
+        </div>
+         
+         <!-- Conteúdo-->
+      <div id="formulario" style="display: none;">
         <div class="col-3  mx-auto">
                   <!-- LOGO  -->
                   <div class="container-img">
@@ -43,7 +53,7 @@
           </div>
       </div>
       <footer>
-        <div class="div-footer">
+        <div id="div-footer" style="display: none;">
           <p>Copyright © 2021 Centro Educacional Assistencial Profissionalizante</p>
         </div>
       </footer>
